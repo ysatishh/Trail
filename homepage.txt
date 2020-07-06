@@ -1,0 +1,47 @@
+from selenium import webdriver
+import time
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
+# driver = selenium.webdriver.chrome
+driver = webdriver.Chrome("C:/Users/ysatish/PycharmProjects/all rules/driver/chromedriver.exe")
+driver.get("https://www.myntra.com/")
+driver.implicitly_wait(4)
+driver.maximize_window()
+time.sleep(4)
+Sur = driver.find_element_by_xpath('//div[@style="padding-bottom: 69.89%;"]')
+driver.execute_script("arguments[0].scrollIntoView();", Sur)
+time.sleep(5)
+Sur.click()
+driver.find_element_by_xpath('//div[@class="search-searchProductsContainer row-base"]//ul[1]//li[1]').click()
+
+
+ #driver.execute_script("window.scrollBy(0,document.body.scrollHeight)")
+
+#time.sleep(2)
+driver.execute_script("window.scrollBy(0, 5000)")
+Rup = driver.find_element_by_class_name("pagination-next")
+#size = len(driver.find_element_by_class_name("pagination-next"))
+#for i in range(0, size):
+    #driver.execute_script("window.scrollBy(0, 5000)")
+    #Rup[i].click()
+   # driver.execute_script("arguments[0].scrollIntoView();", Rup)
+#time.sleep(2)
+#Rup.click()
+#driver.close()
+
+
+
+    #driver.execute_script("window.scrollBY(0,document.body.scrollHeight)")
+#action = ActionChains(driver)
+#Sat = driver.find_element_by_class_name("desktop-main")
+#action.move_to_element(Sat).perform()
+#Tas = driver.find_element_by_class_name("desktop-categoryLink")
+#action.move_to_element(Tas).perform()
+#Tas.click()
+
+
+
+
+
+
